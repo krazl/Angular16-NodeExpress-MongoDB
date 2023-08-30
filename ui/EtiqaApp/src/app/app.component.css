@@ -1,0 +1,45 @@
+/* user-list.css */
+.user-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-item {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-item h3 {
+  margin-top: 0;
+}
+
+.user-item p {
+  margin: 5px 0;
+}
+
+.user-item p.skillset {
+  color: #007bff;
+}
+
+.user-item p.hobby {
+  color: #28a745;
+}
+
+.user-form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

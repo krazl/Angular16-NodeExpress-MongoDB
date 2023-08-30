@@ -1,0 +1,43 @@
+<h2>Etiqa App</h2>
+
+<div class="container">
+    <div class="form-group">
+      <p><input id="newUser.username" placeholder="Username"></p>
+      <p><input id="newUser.email" placeholder="Email"></p>
+      <p><input id="newUser.phoneNumber" placeholder="Phone Number"></p>
+      <p><input id="newUser.skillset" placeholder="Skillset"></p>
+      <p><input id="newUser.hobby" placeholder="Hobby"></p>
+    </div>
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" (click)="addNotes()">Add New Data</button>
+    </div>
+</div>
+
+<div class="user-list">
+  <div *ngFor="let note of notes" class="user-item">
+    <h3>ID: {{ note.id }}</h3>
+    <p>Username: {{ note.username }}</p>
+    <p>Email: {{ note.email }}</p>
+    <p>Phone Number: {{ note.phoneNumber }}</p>
+    <p class="skillset">Skillset: {{ note.skillset }}</p>
+    <p class="hobby">Hobby: {{ note.hobby }}</p>
+    <p>&nbsp;</p>
+    <p><button (click)="note.showEdit = !note.showEdit">Edit User</button>&nbsp;<button (click)="deleteNotes(note.id)">Delete User</button></p>
+    <div *ngIf="note.showEdit">
+      Please Edit Data Accordingly
+      <div class="container">
+        <div class="form-group">
+          <p>Username : <input id="note.username" value={{note.username}}></p>
+          <p>Email : <input id="note.email" value={{note.email}}></p>
+          <p>Phone Number : <input id="note.phoneNumber" value={{note.phoneNumber}}></p>
+          <p>Skill Set : <input id="note.skillset" value={{note.skillset}}></p>
+          <p>Hobby : <input id="note.hobby" value={{note.hobby}}></p>
+        </div>
+        <div class="d-grid">
+          <button class="btn btn-primary btn-lg" (click)="editNotes(note)">Save Data</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
