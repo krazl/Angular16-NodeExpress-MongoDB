@@ -6,7 +6,7 @@ app.use(cors());
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const {request, response} = require("express");
-const uri = "mongodb+srv://etiqaUser:SkiJtTkBRhqNqKOo@cluster0.ydldj9u.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://etiqaUser:<pwdHere>@cluster0.ydldj9u.mongodb.net/?retryWrites=true&w=majority";
 
 const dbName = "etiqa";
 const dbCollection = "etiqadb";
